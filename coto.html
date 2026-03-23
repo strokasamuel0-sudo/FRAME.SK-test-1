@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAME. | Svadobný film & fotografia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,700&display=swap');
+        
+        :root {
+            --bg: #fdfdfb; 
+            --dark: #0a0a0a;
+            --accent: #111111;
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--accent);
+            scroll-behavior: smooth;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        .nav-blur { backdrop-filter: blur(12px); background: rgba(253, 253, 251, 0.9); }
+        .hero-title { letter-spacing: -0.04em; line-height: 0.85; }
+        
+        .dark-section { background-color: var(--dark); color: #fff; }
+        
+        /* Pôvodné LOGO - Zväčšené */
+        .logo-svg { transition: transform 0.3s ease; }
+        .logo-svg:hover { transform: scale(1.05); }
+
+        .package-card { 
+            background: #ffffff; 
+            border: 1px solid rgba(0,0,0,0.06); 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+        }
+        
+        .package-card:hover { 
+            border-color: var(--accent); 
+            transform: translateY(-5px); 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+        }
+
+        .btn-black { background: var(--dark); color: white; transition: 0.3s; padding: 12px 30px; border-radius: 99px; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 0.1em; }
+        .btn-black:hover { opacity: 0.8; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 nav-blur border-b border-black/5 px-8 py-5 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <svg class="logo-svg" width="42" height="42" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="36" height="36" rx="1" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M12 20H28" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M20 12V28" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span class="font-extrabold tracking-tighter text-2xl uppercase">FRAME.</span>
+        </div>
+        <div class="hidden md:flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <a href="#onas" class="hover:opacity-50">Koncepcia</a>
+            <a href="#cennik" class="hover:opacity-50">Cenník</a>
+            <a href="mailto:hello@frame.sk" class="btn-black">Rezervovať</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center px-8 lg:px-24 pt-20 text-black">
+        <h1 class="hero-title text-8xl md:text-[170px] font-extrabold mb-10">
+            FRAME.
+        </h1>
+        <p class="serif text-3xl md:text-5xl italic opacity-80 max-w-4xl leading-tight text-zinc-900">
+            Autentický svadobný film zachytený s citom pre moment.
+        </p>
+        <div class="mt-12 flex items-center gap-3">
+            <span class="w-8 h-px bg-black opacity-20"></span>
+            <span class="text-[11px] uppercase font-bold tracking-[0.3em] opacity-40">s_stroka.vid</span>
+        </div>
+    </section>
+
+    <section id="onas" class="dark-section py-32 px-8 lg:px-24 rounded-t-[3rem] md:rounded-t-[6rem]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-xs uppercase tracking-[0.5em] font-bold opacity-30 mb-12 italic text-white text-center md:text-left">Naša Vízia</h2>
+            <p class="text-3xl md:text-6xl leading-[1.1] font-light mb-16 text-white text-center md:text-left tracking-tighter">
+                Každý záber má svoj <br><strong class="italic serif font-normal">význam.</strong>
+            </p>
+            <div class="grid md:grid-cols-2 gap-16 text-base opacity-70 leading-relaxed italic">
+                <p>
+                    FRAME. je kolektív, ktorý funguje pod umeleckým dohľadom <strong>s_stroka.vid</strong>. Naším cieľom je priniesť filmovú estetiku a moderný grading tam, kde chýbala dynamika a čistota.
+                </p>
+                <p>
+                    Osobne dohliadam na vizuálnu identitu, prácu so svetlom a strih každého projektu. Ponúkame vám overenú kvalitu v efektívnom a dostupnom formáte, bez kompromisov v emócii.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cennik" class="py-32 px-8 lg:px-24 bg-white">
+        <div class="text-center mb-16">
+            <p class="serif text-5xl italic text-black font-medium">Investícia</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto mb-20">
+            <div class="package-card p-10 rounded-[2.5rem]">
+                <h3 class="text-[10px] uppercase font-bold tracking-widest opacity-40 mb-6 text-zinc-400">Basic Combo</h3>
+                <div class="text-3xl font-extrabold mb-8 tracking-tighter">450€</div>
+                <ul class="space-y-4 text-xs mb-10 opacity-70 italic text-zinc-600">
+                    <li>• 10-minútový svadobný film</li>
+                    <li>• 250+ upravených fotografií</li>
+                    <li>• Prítomnosť: Obrad - 00:30</li>
+                </ul>
+                <a href="#" class="block text-center py-3 border border-black/10 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white transition">Zistiť termín</a>
+            </div>
+
+            <div class="package-card p-10 rounded-[2.5rem] border-black/10 bg-zinc-50 shadow-xl md:-translate-y-6">
+                <div class="inline-block bg-black text-white text-[9px] px-3 py-1 rounded-full uppercase tracking-widest mb-6 font-bold">Najobľúbenejšie</div>
+                <h3 class="text-[10px] uppercase font-bold tracking-widest opacity-40 mb-2 text-black">Modern Combo</h3>
+                <div class="text-4xl font-extrabold mb-8 tracking-tighter text-black">550€</div>
+                <ul class="space-y-5 text-xs mb-12 font-medium text-zinc-800">
+                    <li>• 10-minútový film + <strong>Reels</strong></li>
+                    <li>• 400+ upravených fotografií</li>
+                    <li>• Celý svadobný deň (od príprav)</li>
+                </ul>
+                <a href="#" class="block text-center py-4 btn-black shadow-2xl">Rezervovať</a>
+            </div>
+
+            <div class="package-card p-10 rounded-[2.5rem]">
+                <h3 class="text-[10px] uppercase font-bold tracking-widest opacity-40 mb-6 text-zinc-400">Ultimate Combo</h3>
+                <div class="text-3xl font-extrabold mb-8 tracking-tighter">650€</div>
+                <ul class="space-y-4 text-xs mb-10 opacity-70 italic text-zinc-600">
+                    <li>• Film (10-20 min podľa výberu)</li>
+                    <li>• 3-minútový Cinematic Klip</li>
+                    <li>• 1x Svadobné Reels</li>
+                    <li>• 500+ fotografií</li>
+                </ul>
+                <a href="#" class="block text-center py-3 border border-black/10 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white transition">Zistiť termín</a>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-4 mb-32">
+            <div class="p-10 bg-zinc-900 rounded-[2rem] flex justify-between items-center text-white">
+                <div>
+                    <p class="font-bold text-sm uppercase tracking-widest mb-1">Iba Video</p>
+                    <p class="text-[10px] opacity-40 italic">10-min film + Reels</p>
+                </div>
+                <span class="font-bold text-2xl tracking-tighter">400€</span>
+            </div>
+            <div class="p-10 bg-zinc-900 rounded-[2rem] flex justify-between items-center text-white">
+                <div>
+                    <p class="font-bold text-sm uppercase tracking-widest mb-1">Iba Foto</p>
+                    <p class="text-[10px] opacity-40 italic">Kompletná reportáž celého dňa</p>
+                </div>
+                <span class="font-bold text-2xl tracking-tighter">350€</span>
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto text-center p-12 border-t border-black/5">
+            <h4 class="serif text-2xl italic mb-4 text-black">Nenašli ste presne to, čo hľadáte?</h4>
+            <p class="text-sm opacity-50 leading-relaxed mb-0 text-zinc-600">Každá svadba je unikátna. Balíčky slúžia ako základný odrazový mostík – finálny rozsah služieb, dĺžku filmu či počet fotiek <strong>vieme individuálne upraviť podľa vašej predstavy.</strong></p>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-black/5 bg-white text-black">
+        <div class="flex flex-col items-center gap-6">
+            <div class="flex items-center gap-3 opacity-100">
+                <svg width="28" height="28" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="2" y="2" width="36" height="36" rx="1"/>
+                </svg>
+                <span class="font-extrabold tracking-tighter uppercase text-lg">FRAME.</span>
+            </div>
+            <p class="text-[9px] uppercase tracking-[0.5em] opacity-30 italic">Curated & Managed by s_stroka.vid | 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>
